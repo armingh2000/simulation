@@ -1,0 +1,168 @@
+NEW SYSTEM STATE
+clock: 0
+event list: 0.4,3.40282e+38
+server status: 0
+number in queue: 0
+times of arrival: 
+time of last event: 0
+number serviced: 0
+total delay: 0
+area under q(t): 0
+area under b(t): 0
+
+NEW SYSTEM STATE
+clock: 0.4
+event list: 1.6,2.4
+server status: 1
+number in queue: 0
+times of arrival: 
+time of last event: 0
+number serviced: 1
+total delay: 0
+area under q(t): 0
+area under b(t): 0
+
+NEW SYSTEM STATE
+clock: 1.6
+event list: 2.1,2.4
+server status: 1
+number in queue: 1
+times of arrival: 1.6
+time of last event: 0.4
+number serviced: 1
+total delay: 0
+area under q(t): 0
+area under b(t): 1.2
+
+NEW SYSTEM STATE
+clock: 2.1
+event list: 3.8,2.4
+server status: 1
+number in queue: 2
+times of arrival: 2.1,1.6
+time of last event: 1.6
+number serviced: 1
+total delay: 0
+area under q(t): 0.5
+area under b(t): 1.7
+
+NEW SYSTEM STATE
+clock: 2.4
+event list: 3.8,3.1
+server status: 1
+number in queue: 1
+times of arrival: 2.1
+time of last event: 2.1
+number serviced: 2
+total delay: 0.8
+area under q(t): 1.1
+area under b(t): 2
+
+NEW SYSTEM STATE
+clock: 3.1
+event list: 3.8,3.3
+server status: 1
+number in queue: 0
+times of arrival: 
+time of last event: 2.4
+number serviced: 3
+total delay: 1.8
+area under q(t): 1.8
+area under b(t): 2.7
+
+NEW SYSTEM STATE
+clock: 3.3
+event list: 3.8,3.40282e+38
+server status: 0
+number in queue: 0
+times of arrival: 
+time of last event: 3.1
+number serviced: 3
+total delay: 1.8
+area under q(t): 1.8
+area under b(t): 2.9
+
+NEW SYSTEM STATE
+clock: 3.8
+event list: 4,4.9
+server status: 1
+number in queue: 0
+times of arrival: 
+time of last event: 3.3
+number serviced: 4
+total delay: 1.8
+area under q(t): 1.8
+area under b(t): 2.9
+
+NEW SYSTEM STATE
+clock: 4
+event list: 5.6,4.9
+server status: 1
+number in queue: 1
+times of arrival: 4
+time of last event: 3.8
+number serviced: 4
+total delay: 1.8
+area under q(t): 1.8
+area under b(t): 3.1
+
+NEW SYSTEM STATE
+clock: 4.9
+event list: 5.6,8.6
+server status: 1
+number in queue: 0
+times of arrival: 
+time of last event: 4
+number serviced: 5
+total delay: 2.7
+area under q(t): 2.7
+area under b(t): 4
+
+NEW SYSTEM STATE
+clock: 5.6
+event list: 5.8,8.6
+server status: 1
+number in queue: 1
+times of arrival: 5.6
+time of last event: 4.9
+number serviced: 5
+total delay: 2.7
+area under q(t): 2.7
+area under b(t): 4.7
+
+NEW SYSTEM STATE
+clock: 5.8
+event list: 7.2,8.6
+server status: 1
+number in queue: 2
+times of arrival: 5.8,5.6
+time of last event: 5.6
+number serviced: 5
+total delay: 2.7
+area under q(t): 2.9
+area under b(t): 4.9
+
+NEW SYSTEM STATE
+clock: 7.2
+event list: 9.1,8.6
+server status: 1
+number in queue: 3
+times of arrival: 7.2,5.8,5.6
+time of last event: 5.8
+number serviced: 5
+total delay: 2.7
+area under q(t): 5.7
+area under b(t): 6.3
+
+NEW SYSTEM STATE
+clock: 8.6
+event list: 9.1,9.2
+server status: 1
+number in queue: 2
+times of arrival: 7.2,5.8
+time of last event: 7.2
+number serviced: 6
+total delay: 5.7
+area under q(t): 9.9
+area under b(t): 7.7
+
