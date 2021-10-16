@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ostream>
 #include <vector>
 #include <limits>
 #include <sstream>
@@ -18,7 +19,6 @@ Logger::~Logger() {
 }
 
 void Logger::Log(std::string log) {
-    log_file_ << "NEW SYSTEM STATE" << std::endl;
     log_file_ << log;
     log_file_ << std::endl;
 }
@@ -38,7 +38,8 @@ std::string Simulator::GetStringVector(std::vector<float> vec) {
 
 void Simulator::Log() {
     std::stringstream system_state;
-    system_state << "clock: " << clock_ << std::endl
+    system_state << "NEW SYSTEM STATE" << std::endl
+                 << "clock: " << clock_ << std::endl
                  << "event list: " << GetStringVector(event_list_) << std::endl
                  << "server status: " << server_status_ << std::endl
                  << "number in queue: " << number_in_queue_ << std::endl
@@ -61,7 +62,7 @@ Simulator::Simulator(std::vector<float> arrival_intervals, std::vector<float> se
     event_list_.resize(2, kInf); // arrival = 0, departure = 1
     clock_ = last_event_time_ = bt_area_ = number_in_queue_ = qt_area_ = number_serviced_ = total_delay_ = 0;
     server_status_ = false;
-
+    wq_ = lq_ = p_ = l_ = w_ = e_s_ = 0;
 }
 
 int Simulator::GetCurrentEventType() {
@@ -84,6 +85,8 @@ void Simulator::SetDepartureEvent() {
     float service_time = service_times_.back();
     service_times_.pop_back();
     event_list_[1] = service_time + clock_;
+
+    e_s_ += service_time;
 }
 
 void Simulator::UpdateBTArea() {
@@ -169,10 +172,39 @@ void Simulator::RunSimulation() {
 
         Log();
     }
+
+    SetMetrics();
+    LogMetrics();
 }
 
-void Simulator::PrintMetrics() {
-    std::cout << qt_area_ << " " << bt_area_ << " " << total_delay_ << " " << clock_ << std::endl;
+void Simulator::SetMetrics() {
+    wq_ = total_delay_ / kLimit;
+    lq_ = qt_area_ / clock_;
+    p_ = bt_area_ / clock_;
+    l_ = lq_ + p_;
+    e_s_ = e_s_ / kLimit;
+    w_ = wq_ + e_s_;
+}
+
+void Simulator::PrintMetrics(std::string metrics) {
+    std::cout << metrics;
+}
+
+void Simulator::LogMetrics() {
+    std::stringstream metrics;
+    metrics << "METRICS" << std::endl
+            << "Wq: " << wq_ << std::endl
+            << "Lq: " << lq_ << std::endl
+            << "p: " << p_ << std::endl
+            << "L: " << lq_ + p_ << std::endl
+            << "E[s]: " << e_s_ << std::endl
+            << "W: " << w_ << std::endl
+        ;
+
+    std::string metrics_string = metrics.str();
+    logger_.Log(metrics_string);
+
+    PrintMetrics(metrics_string);
 }
 
 int main() {
@@ -182,8 +214,6 @@ int main() {
 
     Simulator simulator(arrival_intervals, service_times, kNumberServiced);
     simulator.RunSimulation();
-
-    simulator.PrintMetrics();
 
     return 0;
 }

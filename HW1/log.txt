@@ -166,3 +166,11 @@ total delay: 5.7
 area under q(t): 9.9
 area under b(t): 7.7
 
+METRICS
+Wq: 0.95
+Lq: 1.15116
+p: 0.895349
+L: 2.04651
+E[s]: 1.38333
+W: 2.33333
+
