@@ -3,6 +3,7 @@
 #include <vector>
 #include <limits>
 #include <sstream>
+#include <cmath>
 
 #include "queue.h"
 
@@ -55,14 +56,37 @@ void Simulator::Log() {
     logger_.Log(system_state_string);
 }
 
-Simulator::Simulator(std::vector<float> arrival_intervals, std::vector<float> service_times, const unsigned kNumberServiced)
-    : kLimit(kNumberServiced) {
-    arrival_intervals_ = arrival_intervals;
-    service_times_ = service_times;
+Simulator::Simulator(const float kLambda, const float kMu, const unsigned kNumberServiced)
+    : kLimit_(kNumberServiced), kLambda_(kLambda), kMu_(kMu) {
     event_list_.resize(2, kInf); // arrival = 0, departure = 1
-    clock_ = last_event_time_ = bt_area_ = number_in_queue_ = qt_area_ = number_serviced_ = total_delay_ = 0;
+    clock_ = last_event_time_ = bt_area_ = number_in_queue_ = qt_area_
+        = number_serviced_ = total_delay_ = 0;
     server_status_ = false;
     wq_ = lq_ = p_ = l_ = w_ = e_s_ = 0;
+}
+
+float Simulator::GenRandomExp(float l) {
+    if(l == 0) return 0.0;
+
+    float r;
+    do {
+        r = std::rand();
+    } while (r == 0);
+
+    r /= (float)RAND_MAX;
+
+    float seq1 = -1 / l;
+    float seq2 = std::log(r);
+
+    return seq1 * seq2;
+}
+
+float Simulator::GetArrivalInterval() {
+    return GenRandomExp(kLambda_);
+}
+
+float Simulator::GetServiceTime() {
+    return GenRandomExp(kMu_);
 }
 
 int Simulator::GetCurrentEventType() {
@@ -76,14 +100,12 @@ int Simulator::GetCurrentEventType() {
 }
 
 void Simulator::SetArrivalEvent() {
-    float arrival_interval = arrival_intervals_.back();
-    arrival_intervals_.pop_back();
+    float arrival_interval = GetArrivalInterval();
     event_list_[0] = arrival_interval + clock_;
 }
 
 void Simulator::SetDepartureEvent() {
-    float service_time = service_times_.back();
-    service_times_.pop_back();
+    float service_time = GetServiceTime();
     event_list_[1] = service_time + clock_;
 
     e_s_ += service_time;
@@ -115,11 +137,10 @@ void Simulator::UpdateTotalDelay() {
 }
 
 void Simulator::RunSimulation() {
-    if(kLimit == 0) return;
+    if(kLimit_ == 0) return;
 
     // add first arrival
-    float arrival_interval = arrival_intervals_.back();
-    arrival_intervals_.pop_back();
+    float arrival_interval = GetArrivalInterval();
     event_list_[0] = arrival_interval;
     Log();
 
@@ -127,7 +148,7 @@ void Simulator::RunSimulation() {
     int event_type;
 
     // simulation
-    while(number_serviced_ < kLimit) {
+    while(number_serviced_ < kLimit_) {
         event_type = GetCurrentEventType();
         event_time = event_list_[event_type];
         last_event_time_ = clock_;
@@ -151,10 +172,10 @@ void Simulator::RunSimulation() {
                 UpdateQTArea();
                 UpdateBTArea();
                 UpdateArrivalTimes();
+                }
             }
-        }
 
-        // departure
+            // departure
         else {
             UpdateBTArea();
             UpdateQTArea();
@@ -178,11 +199,11 @@ void Simulator::RunSimulation() {
 }
 
 void Simulator::SetMetrics() {
-    wq_ = total_delay_ / kLimit;
+    wq_ = total_delay_ / kLimit_;
     lq_ = qt_area_ / clock_;
     p_ = bt_area_ / clock_;
     l_ = lq_ + p_;
-    e_s_ = e_s_ / kLimit;
+    e_s_ = e_s_ / kLimit_;
     w_ = wq_ + e_s_;
 }
 
@@ -209,10 +230,9 @@ void Simulator::LogMetrics() {
 
 int main() {
     const unsigned kNumberServiced = 6;
-    std::vector<float> arrival_intervals{1.9, 1.4, 0.2, 1.6, 0.2, 1.7, 0.5, 1.2, 0.4};
-    std::vector<float> service_times{0.6, 3.7, 1.1, 0.2, 0.7, 2};
+    const float kLambda = 1, kMu = 0.9;
 
-    Simulator simulator(arrival_intervals, service_times, kNumberServiced);
+    Simulator simulator(kLambda, kMu, kNumberServiced);
     simulator.RunSimulation();
 
     return 0;

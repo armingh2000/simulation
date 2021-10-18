@@ -21,7 +21,7 @@ namespace queue_simulation {
     class Simulator {
 
     public:
-        Simulator(std::vector<float>, std::vector<float>, const unsigned);
+        Simulator(const float, const float, const unsigned);
 
         void RunSimulation();
         int GetCurrentEventType(); // returns the earliest event
@@ -34,20 +34,22 @@ namespace queue_simulation {
         void LogMetrics();
         void SetMetrics();
         void PrintMetrics(std::string);
+        float GenRandomExp(float);
+        float GetArrivalInterval();
+        float GetServiceTime();
         std::string GetStringVector(std::vector<float>);
         void Log();
 
     private:
         Logger logger_;
-        const unsigned kLimit;
+        const unsigned kLimit_;
+        const float kLambda_, kMu_;
         float clock_, last_event_time_, total_delay_, qt_area_, bt_area_;
         unsigned number_serviced_, number_in_queue_;
         bool server_status_;
         float wq_, lq_, p_, l_, e_s_, w_;
 
         std::vector<float> event_list_;
-        std::vector<float> arrival_intervals_;
-        std::vector<float> service_times_;
         std::vector<float> arrival_times_;
     };
 
