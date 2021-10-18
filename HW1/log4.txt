@@ -1,0 +1,236 @@
+NEW SYSTEM STATE
+clock: 0
+event list: 0.17413,3.40282e+38
+server status: 0
+number in queue: 0
+times of arrival: 
+time of last event: 0
+number serviced: 0
+total delay: 0
+area under q(t): 0
+area under b(t): 0
+
+NEW SYSTEM STATE
+clock: 0.17413
+event list: 1.10456,0.78537
+server status: 1
+number in queue: 0
+times of arrival: 
+time of last event: 0
+number serviced: 1
+total delay: 0
+area under q(t): 0
+area under b(t): 0
+
+NEW SYSTEM STATE
+clock: 0.78537
+event list: 1.10456,3.40282e+38
+server status: 0
+number in queue: 0
+times of arrival: 
+time of last event: 0.17413
+number serviced: 1
+total delay: 0
+area under q(t): 0
+area under b(t): 0.61124
+
+NEW SYSTEM STATE
+clock: 1.10456
+event list: 1.32966,1.33582
+server status: 1
+number in queue: 0
+times of arrival: 
+time of last event: 0.78537
+number serviced: 2
+total delay: 0
+area under q(t): 0
+area under b(t): 0.61124
+
+NEW SYSTEM STATE
+clock: 1.32966
+event list: 2.95142,1.33582
+server status: 1
+number in queue: 1
+times of arrival: 1.32966
+time of last event: 1.10456
+number serviced: 2
+total delay: 0
+area under q(t): 0
+area under b(t): 0.836335
+
+NEW SYSTEM STATE
+clock: 1.33582
+event list: 2.95142,4.06822
+server status: 1
+number in queue: 0
+times of arrival: 
+time of last event: 1.32966
+number serviced: 3
+total delay: 0.00615966
+area under q(t): 0.00615966
+area under b(t): 0.842495
+
+NEW SYSTEM STATE
+clock: 2.95142
+event list: 3.21508,4.06822
+server status: 1
+number in queue: 1
+times of arrival: 2.95142
+time of last event: 1.33582
+number serviced: 3
+total delay: 0.00615966
+area under q(t): 0.00615966
+area under b(t): 2.45809
+
+NEW SYSTEM STATE
+clock: 3.21508
+event list: 4.49603,4.06822
+server status: 1
+number in queue: 2
+times of arrival: 3.21508,2.95142
+time of last event: 2.95142
+number serviced: 3
+total delay: 0.00615966
+area under q(t): 0.269826
+area under b(t): 2.72176
+
+NEW SYSTEM STATE
+clock: 4.06822
+event list: 4.49603,5.54483
+server status: 1
+number in queue: 1
+times of arrival: 3.21508
+time of last event: 3.21508
+number serviced: 4
+total delay: 1.12296
+area under q(t): 1.9761
+area under b(t): 3.57489
+
+NEW SYSTEM STATE
+clock: 4.49603
+event list: 5.23543,5.54483
+server status: 1
+number in queue: 2
+times of arrival: 4.49603,3.21508
+time of last event: 4.06822
+number serviced: 4
+total delay: 1.12296
+area under q(t): 2.40391
+area under b(t): 4.0027
+
+NEW SYSTEM STATE
+clock: 5.23543
+event list: 5.69926,5.54483
+server status: 1
+number in queue: 3
+times of arrival: 5.23543,4.49603,3.21508
+time of last event: 4.49603
+number serviced: 4
+total delay: 1.12296
+area under q(t): 3.88272
+area under b(t): 4.74211
+
+NEW SYSTEM STATE
+clock: 5.54483
+event list: 5.69926,8.06595
+server status: 1
+number in queue: 2
+times of arrival: 5.23543,4.49603
+time of last event: 5.23543
+number serviced: 5
+total delay: 3.45271
+area under q(t): 4.81091
+area under b(t): 5.05151
+
+NEW SYSTEM STATE
+clock: 5.69926
+event list: 6.36596,8.06595
+server status: 1
+number in queue: 3
+times of arrival: 5.69926,5.23543,4.49603
+time of last event: 5.54483
+number serviced: 5
+total delay: 3.45271
+area under q(t): 5.11978
+area under b(t): 5.20594
+
+NEW SYSTEM STATE
+clock: 6.36596
+event list: 6.41491,8.06595
+server status: 1
+number in queue: 4
+times of arrival: 6.36596,5.69926,5.23543,4.49603
+time of last event: 5.69926
+number serviced: 5
+total delay: 3.45271
+area under q(t): 7.11987
+area under b(t): 5.87264
+
+NEW SYSTEM STATE
+clock: 6.41491
+event list: 6.50244,8.06595
+server status: 1
+number in queue: 5
+times of arrival: 6.41491,6.36596,5.69926,5.23543,4.49603
+time of last event: 6.36596
+number serviced: 5
+total delay: 3.45271
+area under q(t): 7.31567
+area under b(t): 5.92159
+
+NEW SYSTEM STATE
+clock: 6.50244
+event list: 6.95545,8.06595
+server status: 1
+number in queue: 6
+times of arrival: 6.50244,6.41491,6.36596,5.69926,5.23543,4.49603
+time of last event: 6.41491
+number serviced: 5
+total delay: 3.45271
+area under q(t): 7.7533
+area under b(t): 6.00911
+
+NEW SYSTEM STATE
+clock: 6.95545
+event list: 7.28771,8.06595
+server status: 1
+number in queue: 7
+times of arrival: 6.95545,6.50244,6.41491,6.36596,5.69926,5.23543,4.49603
+time of last event: 6.50244
+number serviced: 5
+total delay: 3.45271
+area under q(t): 10.4714
+area under b(t): 6.46212
+
+NEW SYSTEM STATE
+clock: 7.28771
+event list: 9.24244,8.06595
+server status: 1
+number in queue: 8
+times of arrival: 7.28771,6.95545,6.50244,6.41491,6.36596,5.69926,5.23543,4.49603
+time of last event: 6.95545
+number serviced: 5
+total delay: 3.45271
+area under q(t): 12.7972
+area under b(t): 6.79439
+
+NEW SYSTEM STATE
+clock: 8.06595
+event list: 9.24244,9.31415
+server status: 1
+number in queue: 7
+times of arrival: 7.28771,6.95545,6.50244,6.41491,6.36596,5.69926,5.23543
+time of last event: 7.28771
+number serviced: 6
+total delay: 7.02264
+area under q(t): 19.0231
+area under b(t): 7.57263
+
+METRICS
+Wq: 1.17044
+Lq: 2.35845
+p: 0.938839
+L: 3.29729
+E[s]: 1.47014
+W: 2.64058
+
