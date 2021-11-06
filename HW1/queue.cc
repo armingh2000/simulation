@@ -75,7 +75,7 @@ float Simulator::GenRandomExp(float l) {
 
     r /= (float)RAND_MAX;
 
-    float seq1 = -1 / l;
+    float seq1 = -1 * l;
     float seq2 = std::log(r);
 
     return seq1 * seq2;
@@ -191,9 +191,10 @@ void Simulator::RunSimulation() {
         }
         number_in_queue_ = arrival_times_.size();
 
-        Log();
+        //Log();
     }
 
+    Log();
     SetMetrics();
     LogMetrics();
 }
@@ -229,8 +230,8 @@ void Simulator::LogMetrics() {
 }
 
 int main() {
-    const unsigned kNumberServiced = 6;
-    const float kLambda = 1, kMu = 0.4;
+    const unsigned kNumberServiced = 200000000;
+    const float kLambda = 1, kMu = 0.7;
 
     Simulator simulator(kLambda, kMu, kNumberServiced);
     simulator.RunSimulation();

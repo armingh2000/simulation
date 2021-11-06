@@ -1,0 +1,32 @@
+NEW SYSTEM STATE
+clock: 0
+event list: 0.17413,3.40282e+38
+server status: 0
+number in queue: 0
+times of arrival: 
+time of last event: 0
+number serviced: 0
+total delay: 0
+area under q(t): 0
+area under b(t): 0
+
+NEW SYSTEM STATE
+clock: 8.20865e+07
+event list: 8.20865e+07,8.20865e+07
+server status: 1
+number in queue: 0
+times of arrival: 
+time of last event: 8.20865e+07
+number serviced: 200000000
+total delay: 2.21404e+08
+area under q(t): 4.08432e+08
+area under b(t): 3.82063e+07
+
+METRICS
+Wq: 1.10702
+Lq: 4.97562
+p: 0.465439
+L: 5.44106
+E[s]: 0.331133
+W: 1.43815
+
