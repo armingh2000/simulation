@@ -1,0 +1,110 @@
+###On Demand Simulation###
+Days: 15
+
+Cost of bearings: 1440
+Cost of delay time: 3500
+Cost of downtime during repair: 9000
+Cost of repair person: 450
+Total cost: 14390
+Total life of bearings: 62400
+Total cost per 10k hour: 2306
+
+###Broadcast Simulation###
+Days: 15
+
+Cost of bearings: 1440
+Cost of delay time: 1200
+Cost of downtime during repair: 6000
+Cost of repair person: 300
+Total cost: 8940
+Total life of bearings: 49500
+Total cost per 10k hour: 1806
+
+###On Demand Simulation###
+Days: 100
+
+Cost of bearings: 9600
+Cost of delay time: 23450
+Cost of downtime during repair: 60000
+Cost of repair person: 3000
+Total cost: 96050
+Total life of bearings: 403000
+Total cost per 10k hour: 2383
+
+###Broadcast Simulation###
+Days: 100
+
+Cost of bearings: 9600
+Cost of delay time: 7500
+Cost of downtime during repair: 40000
+Cost of repair person: 2000
+Total cost: 59100
+Total life of bearings: 349500
+Total cost per 10k hour: 1690
+
+###On Demand Simulation###
+Days: 1000
+
+Cost of bearings: 96000
+Cost of delay time: 228750
+Cost of downtime during repair: 600000
+Cost of repair person: 30000
+Total cost: 954750
+Total life of bearings: 4046100
+Total cost per 10k hour: 2359
+
+###Broadcast Simulation###
+Days: 1000
+
+Cost of bearings: 96000
+Cost of delay time: 75350
+Cost of downtime during repair: 400000
+Cost of repair person: 20000
+Total cost: 591350
+Total life of bearings: 3452400
+Total cost per 10k hour: 1712
+
+###On Demand Simulation###
+Days: 10000
+
+Cost of bearings: 960000
+Cost of delay time: 2248850
+Cost of downtime during repair: 6000000
+Cost of repair person: 300000
+Total cost: 9508850
+Total life of bearings: 40186700
+Total cost per 10k hour: 2366
+
+###Broadcast Simulation###
+Days: 10000
+
+Cost of bearings: 960000
+Cost of delay time: 749000
+Cost of downtime during repair: 4000000
+Cost of repair person: 200000
+Total cost: 5909000
+Total life of bearings: 34317300
+Total cost per 10k hour: 1721
+
+###On Demand Simulation###
+Days: 100000
+
+Cost of bearings: 9600000
+Cost of delay time: 22490550
+Cost of downtime during repair: 60000000
+Cost of repair person: 3000000
+Total cost: 95090550
+Total life of bearings: 401845400
+Total cost per 10k hour: 2366
+
+###Broadcast Simulation###
+Days: 100000
+
+Cost of bearings: 9600000
+Cost of delay time: 7508950
+Cost of downtime during repair: 40000000
+Cost of repair person: 2000000
+Total cost: 59108950
+Total life of bearings: 343568100
+Total cost per 10k hour: 1720
+

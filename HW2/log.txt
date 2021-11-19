@@ -202,3 +202,11 @@ C    IT    AT    ST   TSB   WTQ   TSE  TCSS   ITS
 
        429         309          97         406   122
 
+average waiting time: 0.97
+waiting probability: 0.4
+server idle probability: 0.283063
+average service time: 3.09
+average inter arrival time: 4.33333
+average waiting time for queue people: 2.425
+average time in system: 4.06
+

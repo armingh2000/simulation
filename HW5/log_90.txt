@@ -1,0 +1,4 @@
+D      Type    Demand   Revenue      Lost   Salvage      Cost    Profit
+
+Totals                3.19105e+07     33698     168492.98916e+072.18608e+06
+
